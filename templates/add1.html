@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<h2 class="text-center">ADD movies using built in function</h2>
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.as_table}}
+    </form>
+{% endblock %}
